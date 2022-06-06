@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #42C2FF;
+  background-color: #712B75;
 }
 .sunny img {
   width: 337px;
@@ -63,6 +63,7 @@ form.search input {
   background: transparent;
   outline: 0;
   text-indent: 26px;
+
 
 }
 .current_weather_country {
