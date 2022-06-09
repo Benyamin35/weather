@@ -1,79 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: #42C2FF;
-}
-.sunny img {
-  width: 337px;
-  height: 337px;
-  float: right;
-  margin-right: 86px;
-  margin-top: -106px;
-  position: relative;
-  z-index: 1;
- 
-}
-.container_blur {
-  width: 1000px;
-  height: 500px;
-  border-radius: 85px;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #42C2FF;
+  }
+  .sunny img {
+    width: 337px;
+    height: 337px;
+    float: right;
+    position: absolute;
+    z-index: 1;
+    right: 86px;
+    top: 0;
   
-  background: linear-gradient(252.44deg, rgba(239, 255, 253, 0.7) 0%, rgba(239, 255, 253, 0) 100%);
-  backdrop-filter: blur(40px);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  position: relative;
-  z-index: 2;
-}
-button{
-  background-color: Transparent;
-  background-repeat:no-repeat;
-  border: none;  
-}
-button img {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+  }
+  .container_blur {
+    width: 1000px;
+    height: 500px;
+    border-radius: 85px;
+    
+    background: linear-gradient(252.44deg, rgba(239, 255, 253, 0.7) 0%, rgba(239, 255, 253, 0) 100%);
+    backdrop-filter: blur(40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    position: relative;
+    z-index: 2;
+  }
+  button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;  
+  }
+  button img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+  }
+  .search-container{
+    text-align: center;
+  }
+  form {
+    background: linear-gradient(252.44deg, rgba(239, 255, 253, 0.7) 0%, rgba(239, 255, 253, 0) 100%);
+    width: 464px;
+    height: 47px;
+    border-radius: 17px;
+    gap: 16px; 
+    display: inline-flex;
+    margin-top: 39px;
+  }
+  form.search input {
+    background: linear-gradient(252.44deg, rgba(239, 255, 253, 0.7) 0%, rgba(239, 255, 253, 0) 100%);
+    backdrop-filter: blur(40px);
+    width: 407px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    background: transparent;
+    outline: 0;
+    text-indent: 26px;
+
+  }
+  .current_weather_country {
+    font-family: "Rubik", sans-serif;
+    font-size: 40px;
+    color: #F2FBFFB2;
+    margin-top: 30px;
   
-}
-form {
-  display: flex;
-  background: linear-gradient(252.44deg, rgba(239, 255, 253, 0.7) 0%, rgba(239, 255, 253, 0) 100%);
-  width: 464px;
-  height: 47px;
-  border-radius: 17px;
-  gap: 16px; 
-  display: inline-flex;
-  margin-top: 39px;
-  margin-left: 277px;
-}
-form.search input {
-  background: linear-gradient(252.44deg, rgba(239, 255, 253, 0.7) 0%, rgba(239, 255, 253, 0) 100%);
-  backdrop-filter: blur(40px);
-  width: 407px;
-  border: none;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  background: transparent;
-  outline: 0;
-  text-indent: 26px;
+  }
 
-}
-.current_weather_country {
-  font-family: "Rubik", sans-serif;
-  font-size: 40px;
-  color: #F2FBFFB2;
-  ;
-}
-
-.current_weather_items {
-  font-family: "Rubik", sans-serif;
-  font-size: 26px;
-  color: #F2FBFFB2
-}
+  .current_weather_items {
+    font-family: "Rubik", sans-serif;
+    font-size: 26px;
+    color: #F2FBFFB2;
+    margin-top: 45px;
+  }
+  .city_country {
+    display: flex;
+    gap: 5px;
+  }
+  .text {
+    margin-left: 84px;
+  }
+  .icon img {
+    pointer-events: none;
+    user-select: none;
+  }
+  .mainAndIcon {
+    display: flex;
+    gap: 10px;
+  }
+  

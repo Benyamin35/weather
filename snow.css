@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #712B75;
+  background-color: #6BA7CC;
 }
 .sunny img {
   width: 337px;
@@ -70,7 +70,6 @@ form.search input {
   font-family: "Rubik", sans-serif;
   font-size: 40px;
   color: #F2FBFFB2;
-  
 }
 
 .current_weather_items {
@@ -79,6 +78,14 @@ form.search input {
   color: #F2FBFFB2;
   margin-top: 45px;
 }
+
 .city_country {
+  display: flex;
+  
+}
+.icon img {
+  pointer-events: none;
+}
+.mainAndIcon {
   display: flex;
 }
