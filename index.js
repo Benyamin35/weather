@@ -10,6 +10,17 @@ const weather_mainIcon = document.querySelector('.weather_main_icon');
 const str = document.querySelector('.str');
 const icon = document.querySelector('.open_Icon');
 
+const date = new Date;
+
+
+
+      function changeDark (){
+        if (date.getHours() > "21"){
+          document.querySelector('.changeImg').src = "img/moon.png";
+          document.body.style.background = "#712B75";
+        }
+      }
+      changeDark();
 
 const form = document.querySelector('form');
 form.addEventListener('submit', (e) => { 
@@ -24,6 +35,8 @@ form.addEventListener('submit', (e) => {
       const weather_iconValue = data.weather[0].icon;
       const weather_humidityValue = data['main']['humidity'];
       const weather_windSpeedValue = data['wind']['speed'];
+      const timeValue = data['timezone'];
+      
 
       
       function kelvinToCels(kelvin) {
@@ -34,17 +47,44 @@ form.addEventListener('submit', (e) => {
       } 
       const floor = kelvinToCels(weather_tempValue);
 
-      const weather_iconValueUrl = "http://openweathermap.org/img/w/" + weather_iconValue + ".png";
-      const iconOriginal = $('.open_Icon').attr('src', weather_iconValueUrl);
+     
+
+      // const weather_iconValueUrl = "http://openweathermap.org/img/w/" + weather_iconValue + ".png";
+      // const iconOriginal = $('.open_Icon').attr('src', weather_iconValueUrl);
 
       city.innerHTML = cityValue + ",";
       country.innerHTML = countryValue;
       weather_temp.innerHTML = floor +  "℃";
       weather_main.innerHTML = weather_mainValue;
-      icon.innerHTML = iconOriginal;
+      //icon.innerHTML = iconOriginal;
       weather_humidity.innerHTML =  "Humidity:" + " "  + weather_humidityValue + "%"; 
       weather_windSpeed.innerHTML = "Wind Speed: " + " " + weather_windSpeedValue + " " + "km/h";
 
+
+      function changeImg (){
+        if (weather_mainValue == "Clouds"){
+          document.querySelector('.changeImg').src = "img/cloudy.png";
+          document.body.style.background = "#8088b0";
+        }else if (weather_mainValue == "Rain" || "thunderstorm" || "Drizzle"){
+          document.querySelector('.changeImg').src = "img/rain.png";
+          document.body.style.background = "#A8AAC4";
+        }else if (weather_mainValue == "Sunny"){
+          document.querySelector('.changeImg').src = "img/Surface.jpg";
+          document.body.style.background = "#42C2FF";
+        }else if (weather_mainValue == "Snow"){
+          document.querySelector('.changeImg').src = "img/snow.png";
+          document.body.style.background = "#6BA7CC";
+        }if (weather_mainValue == "Clear"){
+          document.querySelector('.changeImg').src = "img/moon.png";
+          document.body.style.background = "#712B75";
+        }
+        
+
+      }
+      changeImg();
+      
+
   })})
+
 
 
